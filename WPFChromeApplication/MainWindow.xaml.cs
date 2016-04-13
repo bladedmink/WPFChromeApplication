@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using OwinServer;
 
 namespace WPFChromeApplication
 {
@@ -24,7 +25,14 @@ namespace WPFChromeApplication
         {
             InitializeComponent();
 
-            browser.Address = "http://www.google.com";
+            // Start the web server 'http://localhost:9000'
+            OwinServer.Program server = new OwinServer.Program();
+            server.ConfigureOwinMiddleware();
+
+            // Load the address into the chrome browser
+            browser.Address = "http://localhost:9000/index.html";
         }
+
+
     }
 }
