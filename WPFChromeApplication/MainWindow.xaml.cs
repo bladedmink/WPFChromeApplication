@@ -23,6 +23,8 @@ namespace WPFChromeApplication
         public MainWindow()
         {
             InitializeComponent();
+
+            browser.Address = "http://www.google.com";
         }
     }
 }

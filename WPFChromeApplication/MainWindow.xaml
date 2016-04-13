@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFChromeApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        Title="WPF Chromium Browser" Height="350" Width="525">
     <Grid>
-        
+        <cefSharp:ChromiumWebBrowser Grid.Row="0" Name="browser" />
     </Grid>
 </Window>
